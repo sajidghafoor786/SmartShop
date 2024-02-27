@@ -18,6 +18,7 @@ use App\Http\Controllers\user\CheckOutController;
 use App\Http\Controllers\Admin\CategoryController;
 use App\Http\Controllers\admin\DiscountCoupenController;
 use App\Http\Controllers\admin\OrderController;
+use App\Http\Controllers\admin\UserController;
 use App\Http\Controllers\Admin\ProductsController;
 use App\Http\Controllers\user\auth\LoginController;
 use App\Http\Controllers\Admin\Sub_categoryController;
@@ -95,6 +96,11 @@ Route::middleware(['isAdmin'])->group(function () {
     Route::get('/order-details/{id}', [OrderController::class, 'OrderDetails'])->name('order-detail');
     Route::post('/order/update/{id}', [OrderController::class, 'OrderStatusUpdate'])->name('order.update');
     Route::post('/send_invoice/{id}', [OrderController::class, 'InvoiceEmail'])->name('sendInvoce_email');
+// All user  routre 
+Route::get('/user', [UserController::class, 'index'])->name('user.index');
+Route::get('/user/edit/{id}', [UserController::class, 'edit'])->name('user.edit');
+Route::put('/user/update', [UserController::class, 'update'])->name('user.update');
+Route::get('/user/delete/{id}', [UserController::class, 'delete'])->name('user.delete');
 
     // ProductSubCategory Route here 
     Route::get('/product_sub_category', [ProductSubCategoryController::class, 'index'])->name('product_sub_category');
