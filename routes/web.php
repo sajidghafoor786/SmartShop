@@ -145,5 +145,4 @@ Route::post('/shipping-ordersummery', [CheckOutController::class, 'OrderSummeryS
 // onclick discount coupooen apply route 
 Route::get('/discount-coupen-apply', [CheckOutController::class, 'DiscountApply'])->name('user.DiscountApply');
 Route::get('/Thanks/{order}', [CheckOutController::class, 'Thankyou'])->name('user.Thankyou');
-Route::get('/discount-coupen-apply', [CheckOutController::class, 'DiscountApply'])->name('user.DiscountApply');
-Route::get('/Thanks/{order}', [CheckOutController::class, 'Thankyou'])->name('user.Thankyou');
+
