@@ -1,6 +1,6 @@
 @extends('admin.layout.app')
 @section('title')
-    E-SHOP Deshboard
+    E-BookMart | Dashboard
 @endsection
 @section('body')
    @include('admin.include.body')

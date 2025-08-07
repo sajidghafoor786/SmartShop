@@ -1,6 +1,6 @@
 @extends('user.layout.app')
 @section('title')
-    E-SHOP
+    E-BookMart
 @endsection
 @section('bodyContent')
     @include('user.include.slider')

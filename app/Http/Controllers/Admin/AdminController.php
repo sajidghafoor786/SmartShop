@@ -4,6 +4,12 @@ namespace App\Http\Controllers\Admin;
 
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
+use App\Models\User;
+use App\Models\Products;
+use App\Models\Category;
+use App\Models\Sub_Category;
+use App\Models\Brands;
+use App\Models\Order;
 
 class AdminController extends Controller
 {
@@ -12,54 +18,19 @@ class AdminController extends Controller
      */
     public function index()
     {
-       return view("admin.index");
+         $data = [
+            'totalUsers'         => User::count(),
+            'totalProducts'      => Products::count(),
+            'totalCategories'    => Category::count(),
+            'totalSubCategories' => Sub_Category::count(),
+            'totalBrands'        => Brands::count(),
+            'totalOrders'        => Order::count(),
+            'pendingOrders'      => Order::where('order_status', 'pending')->count(),
+            'shippingOrders'     => Order::where('order_status', 'shipping')->count(),
+            'completedOrders'    => Order::where('order_status', 'completed')->count(),
+        ];
+       return view("admin.index" , $data);
     }
 
-    /**
-     * Show the form for creating a new resource.
-     */
-    public function create()
-    {
-        //
-    }
-
-    /**
-     * Store a newly created resource in storage.
-     */
-    public function store(Request $request)
-    {
-        //
-    }
-
-    /**
-     * Display the specified resource.
-     */
-    public function show(string $id)
-    {
-        //
-    }
-
-    /**
-     * Show the form for editing the specified resource.
-     */
-    public function edit(string $id)
-    {
-        //
-    }
-
-    /**
-     * Update the specified resource in storage.
-     */
-    public function update(Request $request, string $id)
-    {
-        //
-    }
-
-    /**
-     * Remove the specified resource from storage.
-     */
-    public function destroy(string $id)
-    {
-        //
-    }
+    
 }

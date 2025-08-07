@@ -44,7 +44,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@200;500&family=Raleway:ital,wght@0,400;0,600;0,800;1,200&family=Roboto+Condensed:wght@400;700&family=Roboto:wght@300;400;700;900&display=swap" rel="stylesheet">
 
     <!-- Fav Icon -->
-    <link rel="shortcut icon" type="image/x-icon" href="#" />
+    <link rel="shortcut icon" type="" href="{{ asset('logo/fav-icon.png') }}" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/2.1.3/toastr.min.css">
     <style>
         .btn:focus,
@@ -85,7 +85,7 @@
             /* Set your desired background color */
             color: #fff !important;
             /* Set the text color to ensure visibility */
-            /* white-space: nowrap !important; 
+            /* white-space: nowrap !important;
              overflow: hidden !important; */
         }
 
@@ -111,7 +111,7 @@
             border-radius: 60% !important;
             /* padding: 7px !important; */
             font-size: 12px !important;
-        
+
         }
         .wishIcon{
             margin-left: 50px !important;

@@ -4,7 +4,7 @@
               <div class="col-lg-4 logo">
                   <a href="{{ route('user.home') }}" class="text-decoration-none"
                       >
-                      <img src="{{ asset('admin-2/assets-2/logo/logo-2.png') }}" style="height: 100px; width: 150px;object-fit: cover; ">
+                      <img src="{{ asset('logo/book-mart.png') }}" style="height: 100px; width: 150px;object-fit: cover; ">
                   </a>
               </div>
 
@@ -16,7 +16,7 @@
                   @endif
                   <form action="{{ route('user.shop') }}" method="GET">
                       <div class="input-group">
-                          <input type="text" placeholder="Search For Products" value="{{ Request::get('Search') }}"
+                          <input type="text" placeholder="Type Search...." value="{{ Request::get('Search') }}"
                               class="form-control" name="Search">
                           <button type="submit" class="input-group-text ">
                               <i class="fa fa-search"></i>
@@ -32,8 +32,8 @@
       <div class="container">
           <nav class="navbar navbar-expand-xl" id="navbar">
               <a href="{{ route('user.home') }}" class="text-decoration-none mobile-logo">
-                  <span class="h2 text-uppercase text-primary bg-dark">Online</span>
-                  <span class="h2 text-uppercase text-white px-2">SHOP</span>
+                  <span class="h2 text-uppercase text-primary bg-dark">E-Book</span>
+                  <span class="h2 text-uppercase text-white px-2">Mart</span>
               </a>
               <button class="navbar-toggler menu-btn" type="button" data-bs-toggle="collapse"
                   data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
@@ -64,7 +64,7 @@
                                   @endif
                               </li>
                           @endforeach
-                        
+
                           </li>
                       @endif
                   </ul>
