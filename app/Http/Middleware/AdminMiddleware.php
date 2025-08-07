@@ -32,7 +32,7 @@ class AdminMiddleware
         else {
             Session::flash('status', 'error');
             Session::flash('message', 'Please login first view your Dashboard');
-            return redirect()->route('login');
+            return redirect()->route('user.login');
         }
     }
 }

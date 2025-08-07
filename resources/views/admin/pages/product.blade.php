@@ -17,7 +17,7 @@
                     <button type="button" class="btn-close text-dark " data-bs-dismiss="modal">X</button>
                 </div>
                 <!-- Modal body -->
-                <form action="{{ url('products/update') }}" id="productFormUpdate" class="productForm" method="post"
+                <form action="{{ url('products/update') }}" id="productFormUpdate" class="productForm" method="post" >
                     enctype="multipart/form-data">
                     @csrf
                     @method('put')
@@ -39,7 +39,7 @@
                                                 <div class="input-group input-group-static mb-4">
                                                     <label class="ms-0">Slug</label>
                                                     <input type="text" class="form-control" name="slug" id="editSlug"
-                                                        required>
+                                                        >
                                                 </div>
                                             </div>
                                             <div class="col-md-12 mb-3">

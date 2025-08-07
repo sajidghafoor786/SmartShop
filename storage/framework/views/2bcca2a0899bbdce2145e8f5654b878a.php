@@ -1,59 +1,118 @@
  <div class="container-fluid py-4">
-      <div class="row">
-        
-        <div class="col-xl-3 col-sm-6 mb-xl-0 mb-4">
-          <div class="card">
-            <div class="card-header p-3 pt-2">
-              <div class="icon icon-lg icon-shape bg-gradient-primary shadow-primary text-center border-radius-xl mt-n4 position-absolute">
-                <i class="material-icons opacity-10">person</i>
-              </div>
-              <div class="text-end pt-1">
-                <p class="text-sm mb-0 text-capitalize">Today's Users</p>
-                <h4 class="mb-0">2,300</h4>
-              </div>
-            </div>
-            <hr class="dark horizontal my-0">
-            <div class="card-footer p-3">
-              <p class="mb-0"><span class="text-success text-sm font-weight-bolder">+3% </span>than last month</p>
-            </div>
+    <div class="row">
+    <div class="col-xl-3 col-sm-6 mb-xl-0 mb-4">
+      <div class="card">
+        <div class="card-header p-3 pt-2">
+          <div class="icon icon-lg icon-shape bg-gradient-primary shadow-primary text-center border-radius-xl mt-n4 position-absolute">
+            <i class="material-icons opacity-10">group</i>
           </div>
-        </div>
-        <div class="col-xl-3 col-sm-6 mb-xl-0 mb-4">
-          <div class="card">
-            <div class="card-header p-3 pt-2">
-              <div class="icon icon-lg icon-shape bg-gradient-success shadow-success text-center border-radius-xl mt-n4 position-absolute">
-                <i class="material-icons opacity-10">person</i>
-              </div>
-              <div class="text-end pt-1">
-                <p class="text-sm mb-0 text-capitalize">New Clients</p>
-                <h4 class="mb-0">3,462</h4>
-              </div>
-            </div>
-            <hr class="dark horizontal my-0">
-            <div class="card-footer p-3">
-              <p class="mb-0"><span class="text-danger text-sm font-weight-bolder">-2%</span> than yesterday</p>
-            </div>
-          </div>
-        </div>
-        <div class="col-xl-3 col-sm-6">
-          <div class="card">
-            <div class="card-header p-3 pt-2">
-              <div class="icon icon-lg icon-shape bg-gradient-info shadow-info text-center border-radius-xl mt-n4 position-absolute">
-                <i class="material-icons opacity-10">weekend</i>
-              </div>
-              <div class="text-end pt-1">
-                <p class="text-sm mb-0 text-capitalize">Sales</p>
-                <h4 class="mb-0">$103,430</h4>
-              </div>
-            </div>
-            <hr class="dark horizontal my-0">
-            <div class="card-footer p-3">
-              <p class="mb-0"><span class="text-success text-sm font-weight-bolder">+5% </span>than yesterday</p>
-            </div>
+          <div class="text-end pt-1">
+            <p class="text-sm mb-0 text-capitalize">Total Users</p>
+            <h4 class="mb-0"><?php echo e($totalUsers); ?></h4>
           </div>
         </div>
       </div>
-      
+    </div>
+
+    <div class="col-xl-3 col-sm-6 mb-xl-0 mb-4">
+      <div class="card">
+        <div class="card-header p-3 pt-2">
+          <div class="icon icon-lg icon-shape bg-gradient-success shadow-success text-center border-radius-xl mt-n4 position-absolute">
+            <i class="material-icons opacity-10">inventory</i>
+          </div>
+          <div class="text-end pt-1">
+            <p class="text-sm mb-0 text-capitalize">Total Products</p>
+            <h4 class="mb-0"><?php echo e($totalProducts); ?></h4>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="col-xl-3 col-sm-6 mb-xl-0 mb-4">
+      <div class="card">
+        <div class="card-header p-3 pt-2">
+          <div class="icon icon-lg icon-shape bg-gradient-warning shadow-warning text-center border-radius-xl mt-n4 position-absolute">
+            <i class="material-icons opacity-10">category</i>
+          </div>
+          <div class="text-end pt-1">
+            <p class="text-sm mb-0 text-capitalize">Categories</p>
+            <h4 class="mb-0"><?php echo e($totalCategories); ?></h4>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="col-xl-3 col-sm-6 mb-xl-0 mb-4">
+      <div class="card">
+        <div class="card-header p-3 pt-2">
+          <div class="icon icon-lg icon-shape bg-gradient-info shadow-info text-center border-radius-xl mt-n4 position-absolute">
+            <i class="material-icons opacity-10">layers</i>
+          </div>
+          <div class="text-end pt-1">
+            <p class="text-sm mb-0 text-capitalize">Sub Categories</p>
+            <h4 class="mb-0"><?php echo e($totalSubCategories); ?></h4>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="col-xl-3 col-sm-6 mb-xl-0 mb-4 mt-4">
+      <div class="card">
+        <div class="card-header p-3 pt-2">
+          <div class="icon icon-lg icon-shape bg-gradient-dark shadow-dark text-center border-radius-xl mt-n4 position-absolute">
+            <i class="material-icons opacity-10">store</i>
+          </div>
+          <div class="text-end pt-1">
+            <p class="text-sm mb-0 text-capitalize">Total Brands</p>
+            <h4 class="mb-0"><?php echo e($totalBrands); ?></h4>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="col-xl-3 col-sm-6 mb-xl-0 mb-4 mt-4">
+      <div class="card">
+        <div class="card-header p-3 pt-2">
+          <div class="icon icon-lg icon-shape bg-gradient-secondary shadow-secondary text-center border-radius-xl mt-n4 position-absolute">
+            <i class="material-icons opacity-10">check_circle</i>
+          </div>
+          <div class="text-end pt-1">
+            <p class="text-sm mb-0 text-capitalize">Completed Orders</p>
+            <h4 class="mb-0"><?php echo e($completedOrders); ?></h4>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="col-xl-3 col-sm-6 mb-xl-0 mb-4 mt-4">
+      <div class="card">
+        <div class="card-header p-3 pt-2">
+          <div class="icon icon-lg icon-shape bg-gradient-danger shadow-danger text-center border-radius-xl mt-n4 position-absolute">
+            <i class="material-icons opacity-10">hourglass_empty</i>
+          </div>
+          <div class="text-end pt-1">
+            <p class="text-sm mb-0 text-capitalize">Pending Orders</p>
+            <h4 class="mb-0"><?php echo e($pendingOrders); ?></h4>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="col-xl-3 col-sm-6 mb-xl-0 mb-4 mt-4">
+      <div class="card">
+        <div class="card-header p-3 pt-2">
+          <div class="icon icon-lg icon-shape bg-gradient-primary shadow-primary text-center border-radius-xl mt-n4 position-absolute">
+            <i class="material-icons opacity-10">local_shipping</i>
+          </div>
+          <div class="text-end pt-1">
+            <p class="text-sm mb-0 text-capitalize">Shipping Orders</p>
+            <h4 class="mb-0"><?php echo e($shippingOrders); ?></h4>
+          </div>
+        </div>
+      </div>
+    </div>
+</div>
+
       <div class="row mb-4 mt-3">
         <div class="col-lg-12 col-md-12 mb-md-0 mb-4">
           <div class="card">
@@ -329,7 +388,7 @@
             </div>
           </div>
         </div>
-        
+
       </div>
       <footer class="footer py-4  ">
         <div class="container-fluid">
@@ -344,7 +403,7 @@
                 for a better web.
               </div>
             </div>
-            
+
           </div>
         </div>
       </footer>
