@@ -1,6 +1,6 @@
  <div class="container-fluid py-4">
       <div class="row">
-        <div class="col-xl-3 col-sm-6 mb-xl-0 mb-4">
+        {{-- <div class="col-xl-3 col-sm-6 mb-xl-0 mb-4">
           <div class="card">
             <div class="card-header p-3 pt-2">
               <div class="icon icon-lg icon-shape bg-gradient-dark shadow-dark text-center border-radius-xl mt-n4 position-absolute">
@@ -16,7 +16,7 @@
               <p class="mb-0"><span class="text-success text-sm font-weight-bolder">+55% </span>than last week</p>
             </div>
           </div>
-        </div>
+        </div> --}}
         <div class="col-xl-3 col-sm-6 mb-xl-0 mb-4">
           <div class="card">
             <div class="card-header p-3 pt-2">
@@ -69,7 +69,7 @@
           </div>
         </div>
       </div>
-      <div class="row mt-4">
+      {{-- <div class="row mt-4">
         <div class="col-lg-4 col-md-6 mt-4 mb-4">
           <div class="card z-index-2 ">
             <div class="card-header p-0 position-relative mt-n4 mx-3 z-index-2 bg-transparent">
@@ -130,9 +130,9 @@
             </div>
           </div>
         </div>
-      </div>
-      <div class="row mb-4">
-        <div class="col-lg-8 col-md-6 mb-md-0 mb-4">
+      </div> --}}
+      <div class="row mb-4 mt-3">
+        <div class="col-lg-12 col-md-12 mb-md-0 mb-4">
           <div class="card">
             <div class="card-header pb-0">
               <div class="row">
@@ -406,7 +406,7 @@
             </div>
           </div>
         </div>
-        <div class="col-lg-4 col-md-6">
+        {{-- <div class="col-lg-4 col-md-6">
           <div class="card h-100">
             <div class="card-header pb-0">
               <h6>Orders overview</h6>
@@ -474,7 +474,7 @@
               </div>
             </div>
           </div>
-        </div>
+        </div> --}}
       </div>
       <footer class="footer py-4  ">
         <div class="container-fluid">
@@ -485,11 +485,11 @@
                   document.write(new Date().getFullYear())
                 </script>,
                 made with <i class="fa fa-heart"></i> by
-                <a href="https://www.creative-tim.com" class="font-weight-bold" target="_blank">Creative Tim</a>
+                <a href="https://www.creative-tim.com" class="font-weight-bold" target="_blank">E-BookMart</a>
                 for a better web.
               </div>
             </div>
-            <div class="col-lg-6">
+            {{-- <div class="col-lg-6">
               <ul class="nav nav-footer justify-content-center justify-content-lg-end">
                 <li class="nav-item">
                   <a href="https://www.creative-tim.com" class="nav-link text-muted" target="_blank">Creative Tim</a>
@@ -504,7 +504,7 @@
                   <a href="https://www.creative-tim.com/license" class="nav-link pe-0 text-muted" target="_blank">License</a>
                 </li>
               </ul>
-            </div>
+            </div> --}}
           </div>
         </div>
       </footer>

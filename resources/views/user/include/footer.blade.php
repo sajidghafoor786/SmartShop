@@ -5,9 +5,9 @@
                 <div class="footer-card">
                     <h3>Get In Touch</h3>
                     <p>No dolore ipsum accusam no lorem. <br>
-                        123 Street, New York, USA <br>
-                        exampl@example.com <br>
-                        000 000 0000</p>
+                        123 Street, Chunian, Pakistan <br>
+                        info@Ebookmart.com <br>
+                        0306-9867541</p>
                 </div>
             </div>
 
@@ -15,11 +15,11 @@
                 <div class="footer-card">
                     <h3>Important Links</h3>
                     <ul>
-                        <li><a href="about-us.php" title="About">About</a></li>
-                        <li><a href="contact-us.php" title="Contact Us">Contact Us</a></li>
-                        <li><a href="#" title="Privacy">Privacy</a></li>
-                        <li><a href="#" title="Privacy">Terms & Conditions</a></li>
-                        <li><a href="#" title="Privacy">Refund Policy</a></li>
+                        <li><a href="{{route('about')}}" title="About">About</a></li>
+                        <li><a href="{{route('contact')}}" title="Contact Us">Contact Us</a></li>
+                        <li><a href="{{route('privacy')}}" title="Privacy">Privacy</a></li>
+                        <li><a href="{{route('contact')}}" title="Terms & Conditions">Terms & Conditions</a></li>
+                        <li><a href="{{route('refund')}}" title="Refund Policy">Refund Policy</a></li>
                     </ul>
                 </div>
             </div>
@@ -41,7 +41,7 @@
             <div class="row">
                 <div class="col-12 mt-3">
                     <div class="copy-right text-center">
-                        <p>© Copyright 2022 Amazing Shop. All Rights Reserved</p>
+                        <p>© Copyright 2025 E-bookMart. All Rights Reserved</p>
                     </div>
                 </div>
             </div>
@@ -59,7 +59,7 @@
 @yield('custemjs')
 {{-- add tio cart js here  --}}
 <script>
-    // add to cart function 
+    // add to cart function
     function addToCart(id) {
         // Get the CSRF token from the page's meta tag
         var csrfToken = $('meta[name="csrf-token"]').attr('content');
@@ -89,7 +89,7 @@
 
         });
     }
-    // Add To Wishlist product 
+    // Add To Wishlist product
     function WishList(id) {
         // Get the CSRF token from the page's meta tag
         var csrfToken = $('meta[name="csrf-token"]').attr('content');
@@ -109,7 +109,7 @@
                     window.location.href = "{{ route('user.login') }}";
                 } else if (response.message === 'Product already in wishlist') {
                     toastr.error('Product already in wishlist.', 'Error!');
-                  
+
                 } else {
                     // Handle success
                     toastr.success("Product added in wishlist successfully", 'Success!');

@@ -13,18 +13,18 @@ return new class extends Migration
     {
         Schema::create('orders', function (Blueprint $table) {
             $table->id();
-            $table->foreignId('user_id')->constrained()->onDelete('cascade');
+            $table->foreignId('user_id');
             $table->double('subtotal', 10, 2);
             $table->double('shipping', 10, 2);
             $table->string('coupen_code')->nullable();
             $table->double('discount', 10, 2)->nullable();
             $table->double('grand_total', 10, 2)->nullable();
 
-            // user address related colume 
+            // user address related colume
             $table->string('f_name')->nullable();
             $table->string('last_name')->nullable();
             $table->string('email')->nullable();
-            $table->foreignId('country')->constrained()->onDelete('cascade');
+            $table->foreignId('country');
             $table->string('address')->nullable();
             $table->string('city')->nullable();
             $table->string('state')->nullable();

@@ -1,0 +1,66 @@
+  <section class="section-1">
+            <div id="carouselExampleIndicators" class="carousel slide carousel-fade" data-bs-ride="carousel"
+                data-bs-interval="false">
+                <div class="carousel-inner">
+                    <div class="carousel-item active">
+                        <!-- <img src="frontend-asset/frontend-asset/images/carousel-1.jpg" class="d-block w-100" alt=""> -->
+
+                        <picture>
+                            <source media="(max-width: 799px)" srcset="frontend-asset/images/carousel-1-m.jpg" />
+                            <source media="(min-width: 800px)" srcset="frontend-asset/images/carousel-1.jpg" />
+                            <img src="frontend-asset/frontend-asset/images/carousel-1.jpg" alt="" />
+                        </picture>
+
+                        <div class="carousel-caption d-flex flex-column align-items-center justify-content-center">
+                            <div class="p-3">
+                                <h1 class="display-4 text-white mb-3">Discover Your Next Read</h1>
+                                <p class="mx-md-5 px-5">Browse thousands of e-books from top authors and genres. Instant access, anywhere, anytime.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="carousel-item">
+
+                        <picture>
+                            <source media="(max-width: 799px)" srcset="frontend-asset/images/carousel-2-m.jpg" />
+                            <source media="(min-width: 800px)" srcset="frontend-asset/images/carousel-2.jpg" />
+                            <img src="frontend-asset/frontend-asset/images/carousel-2.jpg" alt="" />
+                        </picture>
+
+                        <div class="carousel-caption d-flex flex-column align-items-center justify-content-center">
+                            <div class="p-3">
+                                <h1 class="display-4 text-white mb-3">Bestsellers at Your Fingertips</h1>
+                                <p class="mx-md-5 px-5">Get the latest trending books and timeless classics instantly in digital format.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="carousel-item">
+                        <!-- <img src="frontend-asset/frontend-asset/images/carousel-3.jpg" class="d-block w-100" alt=""> -->
+
+                        <picture>
+                            <source media="(max-width: 799px)" srcset="frontend-asset/images/carousel-3-m.jpg" />
+                            <source media="(min-width: 800px)" srcset="frontend-asset/images/carousel-3.jpg" />
+                            <img src="frontend-asset/frontend-asset/images/carousel-2.jpg" alt="" />
+                        </picture>
+
+                        <div class="carousel-caption d-flex flex-column align-items-center justify-content-center">
+                            <div class="p-3">
+                                <h1 class="display-4 text-white mb-3">Up to 70% Off Digital Books
+                                </h1>
+                                <p class="mx-md-5 px-5">Enjoy unbeatable deals on top-rated e-books. Limited time only!</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators"
+                    data-bs-slide="prev">
+                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Previous</span>
+                </button>
+                <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators"
+                    data-bs-slide="next">
+                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Next</span>
+                </button>
+            </div>
+        </section>
+<?php /**PATH C:\xampp\htdocs\SmartShop\resources\views/user/include/slider.blade.php ENDPATH**/ ?>

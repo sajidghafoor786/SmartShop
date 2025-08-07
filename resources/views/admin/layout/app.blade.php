@@ -12,7 +12,7 @@
     <link rel="apple-touch-icon" sizes="76x76" href="../../../assets/img/apple-icon.png">
     <link rel="icon" type="image/png" href="../../../assets/img/favicon.png">
     <title>
-        @yield('title')
+        E-BookMart | Dashboard
     </title>
 
 
@@ -115,7 +115,7 @@
         padding-top: 12px !important;
       }
 
-      
+
     </style>
     <script>
         (function(a, s, y, n, c, h, i, d, e) {
@@ -450,7 +450,7 @@
         integrity="sha512-euoFGowhlaLqXsPWQ48qSkBSCFs3DPRyiwVu3FjR96cMPx+Fr+gpWRhIafcHwqwCqWS42RZhIudOvEI+Ckf6MA=="
         data-cf-beacon='{"rayId":"8552b53d0b4b3c8f","b":1,"version":"2024.2.0","token":"1b7cbb72744b40c580f8633c6b62637e"}'
         crossorigin="anonymous"></script>
-        
+
 </body>
 
 </html>

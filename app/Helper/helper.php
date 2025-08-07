@@ -12,7 +12,7 @@ use App\Models\User;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Mail;
 
-// get category  by navbar  
+// get category  by navbar
 function getCategort()
 {
     return Category::orderBy('id', 'ASC')->with('sub_category')->where('status', '1')->take(4)->get();
@@ -20,9 +20,9 @@ function getCategort()
 // get category for show category in home page
 function getCategortAll()
 {
-    return Category::orderBy('name', 'ASC')->with('sub_category')->where('status', '1')->get();
+    return Category::orderBy('id', 'ASC')->with('sub_category')->where('status', '1')->get();
 }
-// get product 
+// get product
 function getProduct()
 {
     // dd('Helper function called');
@@ -33,7 +33,7 @@ function getProductLatest()
 
     return Products::orderBy('id', 'DESC')->with('images')->where('status', '1')->take(8)->get();
 }
-// get brand 
+// get brand
 function getBrands()
 {
     return Brands::orderBy('id', 'DESC')->where('status', '0')->get();
@@ -52,10 +52,10 @@ function OrderEmailSend($OrderId , $userType)
     $adminEmail = Auth()->user();
     // dd($adminEmail);
     $order = Order::where('id', $OrderId)->with('items')->first();
-    // get user actual email 
+    // get user actual email
     $userEmail = User::where('id', $order->user_id)->first();
     $itemCount = $order->items->count(); // Use the relationship to get items
-    // check coutomer ad admin 
+    // check coutomer ad admin
      if($userType == 'Customer'){
         $subject = 'Thanks for the new order';
         $email =$userEmail->email;
