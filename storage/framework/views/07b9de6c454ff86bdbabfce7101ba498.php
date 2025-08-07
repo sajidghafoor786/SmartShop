@@ -12,7 +12,7 @@
     <link rel="apple-touch-icon" sizes="76x76" href="../../../assets/img/apple-icon.png">
     <link rel="icon" type="image/png" href="../../../assets/img/favicon.png">
     <title>
-        <?php echo $__env->yieldContent('title'); ?>
+        E-BookMart | Dashboard
     </title>
 
 
@@ -115,7 +115,11 @@
         padding-top: 12px !important;
       }
 
-      
+<<<<<<< HEAD
+
+=======
+
+>>>>>>> 047d38f7e7c4f4d0268c9d7ae846aeb3b3110f5b
     </style>
     <script>
         (function(a, s, y, n, c, h, i, d, e) {
@@ -179,15 +183,15 @@
 
 <body class="g-sidenav-show  bg-gray-200">
     <div class="wrapper ">
-        
+
         <?php echo $__env->make('admin/include.sidebar', \Illuminate\Support\Arr::except(get_defined_vars(), ['__data', '__path']))->render(); ?>
-        
+
         <main class="main-content position-relative max-height-vh-100 h-100 border-radius-lg ">
-            
+
             <?php echo $__env->make('admin/include.navbar', \Illuminate\Support\Arr::except(get_defined_vars(), ['__data', '__path']))->render(); ?>
-            
+
             <div class="content">
-                
+
                 <?php echo $__env->yieldContent('body'); ?>
             </div>
         </main>
@@ -450,7 +454,11 @@
         integrity="sha512-euoFGowhlaLqXsPWQ48qSkBSCFs3DPRyiwVu3FjR96cMPx+Fr+gpWRhIafcHwqwCqWS42RZhIudOvEI+Ckf6MA=="
         data-cf-beacon='{"rayId":"8552b53d0b4b3c8f","b":1,"version":"2024.2.0","token":"1b7cbb72744b40c580f8633c6b62637e"}'
         crossorigin="anonymous"></script>
-        
+<<<<<<< HEAD
+
+=======
+
+>>>>>>> 047d38f7e7c4f4d0268c9d7ae846aeb3b3110f5b
 </body>
 
 </html>

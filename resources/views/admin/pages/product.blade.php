@@ -9,7 +9,7 @@
 
     <!-- Modal for update category -->
     <div class="modal fade" id="editProduct">
-        <div class="modal-dialog modal-xl">
+        <div class="modal-dialog modal-md">
             <div class="modal-content bg">
                 <!-- Modal Header -->
                 <div class="modal-header">
@@ -340,7 +340,7 @@
                     </div>
                 </div>
                 {{-- <div class="card-footer clearfix shadow-none">
-                    pagination 
+                    pagination
                     {{ $product->links() }}
                 </div> --}}
             </div>
@@ -350,7 +350,7 @@
 
     <!-- Modal for add product -->
     <div class="modal fade" id="addProduct">
-        <div class="modal-dialog modal-xl">
+        <div class="modal-dialog modal-xl ">
             <div class="modal-content bg">
                 <!-- Modal Header -->
                 <div class="modal-header">
@@ -633,7 +633,7 @@
                                         <div class="card" style="width: 150px; margin-right: 10px; margin-bottom: 10px;">
                                             <img src="${imagePath}" class="card-img-top" alt="Product Image"  style="width: 100%; object-fit: contain;">
                                             <div class="card-body">
-                                                
+
                                                 <button class="btn btn-danger deleteImageBtn" value="${id}" data-image="${imageName}">Delete</button>
                                             </div>
                                         </div>
@@ -670,7 +670,7 @@
 
             });
 
-            // triggle methed for open modal show sub category  
+            // triggle methed for open modal show sub category
             $('#editProduct').on('shown.bs.modal', function() {
                 $(".Category").trigger('change');
             });
@@ -768,7 +768,7 @@
         //     $('#saveChanges').click(function() {
         //         // ...
         //     });
-        // }); 
+        // });
     </script>
 
 

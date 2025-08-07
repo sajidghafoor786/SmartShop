@@ -388,7 +388,7 @@
             </div>
           </div>
         </div>
-        
+
       </div>
       <footer class="footer py-4  ">
         <div class="container-fluid">
@@ -403,7 +403,7 @@
                 for a better web.
               </div>
             </div>
-            
+
           </div>
         </div>
       </footer>

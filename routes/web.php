@@ -20,6 +20,11 @@ use App\Http\Controllers\admin\DiscountCoupenController;
 use App\Http\Controllers\admin\OrderController;
 use App\Http\Controllers\admin\UserController;
 use App\Http\Controllers\Admin\ProductsController;
+use League\CommonMark\Event\AbstractEvent;
+use App\Http\Controllers\AboutController;
+use App\Http\Controllers\ContactController;
+use App\Http\Controllers\PrivacyController;
+use App\Http\Controllers\RefundController;
 use App\Http\Controllers\user\auth\LoginController;
 use App\Http\Controllers\Admin\Sub_categoryController;
 use App\Http\Controllers\user\auth\RegisterController;
@@ -152,3 +157,11 @@ Route::post('/shipping-ordersummery', [CheckOutController::class, 'OrderSummeryS
 Route::get('/discount-coupen-apply', [CheckOutController::class, 'DiscountApply'])->name('user.DiscountApply');
 Route::get('/Thanks/{order}', [CheckOutController::class, 'Thankyou'])->name('user.Thankyou');
 
+// About page route
+Route::get('/about', [AboutController::class, 'about'])->name('about');
+// Contact page route
+Route::get('/contact', [ContactController::class, 'contact'])->name('contact');
+// privacy page route
+Route::get('/privacy', [PrivacyController::class, 'privacy'])->name('privacy');
+// refund page route
+Route::get('/refund', [RefundController::class, 'refund'])->name('refund');

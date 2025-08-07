@@ -15,11 +15,11 @@
                 <div class="footer-card">
                     <h3>Important Links</h3>
                     <ul>
-                        <li><a href="about-us.php" title="About">About</a></li>
-                        <li><a href="contact-us.php" title="Contact Us">Contact Us</a></li>
-                        <li><a href="#" title="Privacy">Privacy</a></li>
-                        <li><a href="#" title="Privacy">Terms & Conditions</a></li>
-                        <li><a href="#" title="Privacy">Refund Policy</a></li>
+                        <li><a href="<?php echo e(route('about')); ?>" title="About">About</a></li>
+                        <li><a href="<?php echo e(route('contact')); ?>" title="Contact Us">Contact Us</a></li>
+                        <li><a href="<?php echo e(route('privacy')); ?>" title="Privacy">Privacy</a></li>
+                        <li><a href="<?php echo e(route('contact')); ?>" title="Terms & Conditions">Terms & Conditions</a></li>
+                        <li><a href="<?php echo e(route('refund')); ?>" title="Refund Policy">Refund Policy</a></li>
                     </ul>
                 </div>
             </div>
