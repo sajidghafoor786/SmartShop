@@ -9,46 +9,11 @@
     <hr class="horizontal light mt-0 mb-2">
     <div class="collapse navbar-collapse w-auto h-auto" id="sidenav-collapse-main">
         <ul class="navbar-nav">
-            {{-- <li class="nav-item mb-2 mt-0">
-                <a data-bs-toggle="collapse" href="#ProfileNav" class="nav-link text-white" aria-controls="ProfileNav" role="button" aria-expanded="true">
-                    <img src="../../../assets/img/team-3.jpg" class="avatar">
-                    <span class="nav-link-text ms-2 ps-1">Brooklyn Alice</span>
-                </a>
-                <div class="collapse" id="ProfileNav">
-                    <ul class="nav">
-                        <li class="nav-item">
-                            <a class="nav-link text-white " href="#">
-                                <span class="sidenav-mini-icon"> MP </span>
-                                <span class="sidenav-normal ms-3 ps-1"> My Profile </span>
-                            </a>
-                        </li>
-                        <!-- Add other profile links here -->
-                    </ul>
-                </div>
-            </li> --}}
-            {{-- <hr class="horizontal light mt-0"> --}}
-            {{-- <li class="nav-item">
-                <a data-bs-toggle="collapse" href="#dashboardsExamples" class="nav-link text-white" aria-controls="dashboardsExamples" role="button" aria-expanded="false">
-                    <i class="material-icons-round opacity-10">dashboard</i>
-                    <span class="nav-link-text ms-2 ps-1">Dashboards</span>
-                </a>
-                <div class="collapse" id="dashboardsExamples">
-                    <ul class="nav">
-                        <li class="nav-item">
-                            <a class="nav-link text-white active" href="#">
-                                <span class="sidenav-mini-icon"> A </span>
-                                <span class="sidenav-normal ms-2 ps-1"> Analytics </span>
-                            </a>
-                        </li>
-                        <!-- Add other dashboard links here -->
-                    </ul>
-                </div>
-            </li> --}}
             <li class="nav-item mt-3">
                 <h6 class="ps-4 ms-2 text-uppercase text-xs font-weight-bolder text-white">PAGES</h6>
             </li>
-            <li class="nav-item">
-                <a class="nav-link text-white  {{ Request::is('/dashboard') ? 'bg-gradient-primary' : '' }}" href="{{ url('/dashboard ') }}">
+             <li class="nav-item ">
+                <a class="nav-link text-white {{ Request::is('dashboard') ? 'bg-gradient-primary' : '' }} " href="{{ url('dashboard') }}">
                     <div class="text-white text-center me-2 d-flex align-items-center justify-content-center">
                         <i class="material-icons opacity-10">dashboard</i>
                     </div>

@@ -6,7 +6,7 @@
     OrderList
 @endsection
 @section('body')
-    
+
     <div>
         <div class="container-fluid py-4 px-4 ">
             <div class="d-sm-flex justify-content-between">
@@ -60,8 +60,6 @@
                                                 </td>
                                                 <td class="text-xs font-weight-normal">
                                                     <div class="d-flex align-items-center">
-                                                        <img src="../../../assets/img/team-2.jpg"
-                                                            class="avatar avatar-xs me-2" alt="user image">
                                                         <span>{{ $item->Users->name }}</span>
                                                     </div>
                                                 </td>
@@ -132,7 +130,7 @@
 
         </div>
 
-       
+
 
         <!--end  Modal for add product -->
     @endsection
@@ -153,7 +151,7 @@
             });
         </script>
 
-       
+
         @if ($errors->any())
             <script>
                 $(document).ready(function() {

@@ -18,7 +18,12 @@ class AdminController extends Controller
      */
     public function index()
     {
+          $completedOrders = Order::where('order_status', 'completed')
+        ->orderBy('updated_at', 'desc')
+        ->take(10)
+        ->get();
          $data = [
+            'order' => $completedOrders,
             'totalUsers'         => User::count(),
             'totalProducts'      => Products::count(),
             'totalCategories'    => Category::count(),
@@ -32,5 +37,5 @@ class AdminController extends Controller
        return view("admin.index" , $data);
     }
 
-    
+
 }
