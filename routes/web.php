@@ -33,20 +33,7 @@ use App\Http\Controllers\Admin\ProductSubCategoryController;
 use App\Http\Controllers\user\MyOrderController;
 use App\Http\Controllers\user\WishListController;
 
-Route::get('/dashboard', function () {
-    return view('dashboard');
-})->middleware(['auth', 'verified'])->name('dashboard');
-// Route::get('/test', function () {
-//     OrderEmailSend(58);
-// });
 
-Route::middleware('auth')->group(function () {
-    Route::get('/profile', [ProfileController::class, 'edit'])->name('profile.edit');
-    Route::patch('/profile', [ProfileController::class, 'update'])->name('profile.update');
-    Route::delete('/profile', [ProfileController::class, 'destroy'])->name('profile.destroy');
-});
-require __DIR__ . '/auth.php';
-Auth::routes();
 // after authentication show who page show deciede route
 Route::get('/home', [HomeController::class, 'index'])->name('home');
 // Login and Logout Routes...
@@ -126,6 +113,8 @@ Route::group(['prefix' => 'account'], function () {
         // this route after authenticated accessable
         Route::get('/logout', [LoginController::class, 'LogOut'])->name('user.logout');
         Route::get('/profile', [LoginController::class, 'profile'])->name('user.profile');
+        Route::put('/profile/update', [LoginController::class, 'update'])->name('profile.update');
+
         Route::get('/order', [MyOrderController::class, 'MyOrder'])->name('user.MyOrder');
         Route::get('/order-details/{id}', [MyOrderController::class, 'MyOrderDetails'])->name('user.MyOrderDetails');
         // wishlist route
