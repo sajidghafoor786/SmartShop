@@ -30,7 +30,7 @@ class LoginController extends Controller
             if (Auth::attempt(['email' => $request->email, 'password' => $request->password], $request->get('remember'))) {
                 Session::flash('status', 'success');
                 return redirect()->intended(RouteServiceProvider::HOME)->with('message', 'User created successfully!');
-            
+
             } else {
                 return redirect()->back()->withErrors($validator)->withInput($request->only('email'));
             }
@@ -43,7 +43,24 @@ class LoginController extends Controller
         Session::flash('status', 'success');
         return redirect()->route('user.home')->with('message', 'you are successful logout!');
     }
-    public function profile(){
+    public function profile()
+    {
         return view('user.account.profile');
+    }
+    public function update(Request $request)
+    {
+        $request->validate([
+            'name' => 'required|string|max:255',
+            'email' => 'required|email|max:255',
+            'phone_number' => 'required|numeric',
+
+        ]);
+
+        $user = auth()->user();
+        $user->name = $request->name;
+        $user->phone_number = $request->phone_number;
+        $user->save();
+        Session::flash('status', 'success');
+        return redirect()->back()->with('message', 'Profile updated successfully.');
     }
 }

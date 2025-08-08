@@ -36,7 +36,7 @@
                      </a>
                      <ul class="dropdown-menu dropdown-menu-end p-2 me-sm-n4" aria-labelledby="dropdownMenuButton">
                             <li class="">
-                             <a class="dropdown-item border-radius-md" href="{{ route('profile.edit') }}">
+                             <a class="dropdown-item border-radius-md" data-bs-toggle="modal" data-bs-target="#editProfileModal">
                                  <i class="fa fa-user me-sm-1"></i> profile
                              </a>
                          </li>
@@ -121,3 +121,40 @@
          </div>
      </div>
  </nav>
+
+<!-- Edit Profile Modal -->
+<div class="modal fade" id="editProfileModal" tabindex="-1" aria-labelledby="editProfileModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <form method="POST" action="{{ route('profile.update') }}">
+      @csrf
+      @method('PUT')
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="editProfileModalLabel">Edit Profile</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+
+        <div class="modal-body">
+          <div class="mb-3">
+            <label for="name" class="form-label">Name</label>
+            <input name="name" type="text" class="form-control" id="name" value="{{ auth()->user()->name }}">
+          </div>
+          <div class="mb-3">
+            <label for="email" class="form-label">Email</label>
+            <input name="email" type="email" class="form-control" id="email" readonly value="{{ auth()->user()->email }}">
+          </div>
+          <div class="mb-3">
+            <label for="email" class="form-label">Phone. No</label>
+            <input name="phone_number" type="text" class="form-control" id="phone" maxlength="12" value="{{ auth()->user()->phone_number }}">
+          </div>
+          <!-- Add more fields as needed -->
+        </div>
+
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+          <button type="submit" class="btn btn-primary">Save changes</button>
+        </div>
+      </div>
+    </form>
+  </div>
+</div>
